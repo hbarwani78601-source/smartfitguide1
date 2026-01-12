@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Gear Quiz - SmartFitGuide</title>
+    <meta name="description"
+        content="Take our 30-second quiz to find the perfect home workout equipment for your budget and goals.">
+    <!-- Google Fonts & Material Symbols -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .quiz-wrapper {
+            max-width: 600px;
+            margin: 4rem auto;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">
+                    <span class="material-symbols-outlined" style="font-size: 28px;">fitness_center</span>
+                    SmartFitGuide
+                </a>
+                <div class="mobile-toggle">
+                    <span class="material-symbols-outlined">menu</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/quiz/">Quiz</a></li>
+                    <li><a href="/dumbbells/">Dumbbells</a></li>
+                    <li><a href="/resistance-bands/">Resistance Bands</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/about/">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="quiz-wrapper" id="quiz-container">
+
+            <!-- Intro -->
+            <div id="quiz-intro">
+                <h1>Find Your Perfect Gear</h1>
+                <p class="mb-1">Answer 4 quick questions to get a personalized recommendation.</p>
+                <button id="start-btn" class="btn btn-primary mt-1">Start Quiz</button>
+            </div>
+
+            <!-- Question -->
+            <div id="quiz-question" class="hidden">
+                <p id="step-indicator" class="text-muted"
+                    style="margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Step
+                    1 of 4</p>
+                <h2 id="question-text" class="mb-1">Question goes here</h2>
+                <div id="options-container">
+                    <!-- Options injected by JS -->
+                </div>
+            </div>
+
+            <!-- Result -->
+            <div id="quiz-result" class="hidden">
+                <h2>We Recommend: <span id="result-title" style="color: var(--primary);">Product</span></h2>
+                <p id="result-desc" class="mb-1">Reasoning...</p>
+                <div class="mt-2">
+                    <a id="result-link" href="#" class="btn btn-primary">See Options</a>
+                    <br><br>
+                    <a href="/quiz/" onclick="location.reload()"
+                        style="font-size: 0.9rem; color: var(--text-muted);">Retake Quiz</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            &copy; 2026 SmartFitGuide
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/quiz.js"></script>
+</body>
+
+</html>

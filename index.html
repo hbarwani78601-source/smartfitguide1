@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFitGuide - Smarter Fitness Gear. Chosen for You.</title>
+    <meta name="description"
+        content="Expert-backed fitness equipment guides to help you train better at home. Unbiased recommendations for dumbbells, supplements, and more.">
+    <!-- Google Fonts & Material Symbols -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Specific Styles for Home Page Updates */
+        .nav-disabled {
+            opacity: 0.5;
+            pointer-events: none;
+            cursor: default;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-surface);
+            border-radius: var(--radius-lg);
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: white;
+            border-color: var(--border);
+            box-shadow: var(--shadow-1);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            color: var(--primary);
+            font-size: 3rem !important;
+            margin-bottom: 1rem;
+        }
+
+        .coming-soon-badge {
+            font-size: 0.7rem;
+            background: var(--text-muted);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 5px;
+            vertical-align: middle;
+            text-transform: uppercase;
+        }
+
+        /* Hero tweaks */
+        .hero {
+            padding: 5rem 0 5rem;
+        }
+
+        .hero h1 {
+            font-weight: 700;
+        }
+
+        .hero-sub {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+        }
+
+        /* Category Card Hover */
+        .category-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-icon {
+            font-size: 48px !important;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. HEADER (Sticky) -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">
+                    <span class="material-symbols-outlined"
+                        style="font-size: 32px; color: var(--primary);">fitness_center</span>
+                </a>
+                <div class="mobile-toggle">
+                    <span class="material-symbols-outlined">menu</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/" style="color: var(--primary);">Home</a></li>
+                    <li><a href="/dumbbells/">Dumbbells</a></li>
+                    <li><a href="/supplements.html">Supplements</a></li>
+                    <li>
+                        <a href="/quiz/" class="nav-disabled">Quiz <small style="font-size: 0.7em;">(Soon)</small></a>
+                    </li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li>
+                        <a href="/dumbbells/" class="btn btn-primary"
+                            style="padding: 0.5rem 1.25rem; font-size: 0.9rem;">Find My Equipment</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <p
+                style="font-weight: 700; color: var(--primary); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1rem; font-size: 0.9rem;">
+                SmartFitGuide</p>
+            <h1>Smarter Fitness Gear.<br>Chosen for You.</h1>
+            <p class="hero-sub">Expert-backed fitness equipment guides to help you train better at home — without
+                wasting money.</p>
+            <div class="hero-buttons">
+                <a href="/dumbbells/" class="btn btn-primary">
+                    Explore Dumbbells
+                </a>
+                <a href="#" class="btn btn-secondary nav-disabled">
+                    Not sure what to buy? Take our quiz →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. WHY SMARTFITGUIDE -->
+    <section class="section">
+        <div class="container">
+            <div class="grid-3">
+                <div class="feature-card">
+                    <span class="material-symbols-outlined feature-icon">science</span>
+                    <h3>Research-Driven</h3>
+                    <p class="text-muted">We analyze real use cases, not hype. Our guides are built on facts.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="material-symbols-outlined feature-icon">sentiment_satisfied_alt</span>
+                    <h3>Beginner Friendly</h3>
+                    <p class="text-muted">Clear recommendations for home workouts. No confusing jargon.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="material-symbols-outlined feature-icon">reviews</span>
+                    <h3>Honest Affiliate Picks</h3>
+                    <p class="text-muted">No paid placements. We only recommend gear we’d use ourselves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. POPULAR CATEGORIES -->
+    <section class="section" style="background-color: var(--bg-surface);">
+        <div class="container">
+            <h2 class="section-title">Popular Categories</h2>
+            <div class="grid-3">
+                <!-- Dumbbells -->
+                <div class="card category-card">
+                    <div class="card-body text-center">
+                        <span class="material-symbols-outlined category-icon">fitness_center</span>
+                        <h3 class="card-title">Dumbbells</h3>
+                        <p class="card-text">Adjustable vs Fixed. Find the perfect set for your home gym.</p>
+                        <a href="/dumbbells/" class="btn btn-outline" style="width: 100%;">View Guide</a>
+                    </div>
+                </div>
+
+                <!-- Supplements -->
+                <div class="card category-card">
+                    <div class="card-body text-center">
+                        <span class="material-symbols-outlined category-icon">medication</span>
+                        <h3 class="card-title">Supplements</h3>
+                        <p class="card-text">Safe, beginner-friendly advice on protein, creatine, and more.</p>
+                        <a href="/supplements.html" class="btn btn-outline" style="width: 100%;">View Guide</a>
+                    </div>
+                </div>
+
+                <!-- Resistance Bands -->
+                <div class="card category-card">
+                    <div class="card-body text-center">
+                        <span class="material-symbols-outlined category-icon">linear_scale</span>
+                        <h3 class="card-title">Resistance Bands</h3>
+                        <p class="card-text">Portable, versatile, and joint-friendly. Great for beginners.</p>
+                        <a href="/resistance-bands/" class="btn btn-outline" style="width: 100%;">View Guide</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FEATURED GUIDE -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Guide</h2>
+            <div class="product-card-horizontal">
+                <div class="product-image" style="background: #e8f0fe;">
+                    <span class="material-symbols-outlined" style="font-size: 64px; color: var(--primary);">star</span>
+                </div>
+                <div class="product-content">
+                    <div>
+                        <h3>Best Dumbbells for Home Workouts (2026)</h3>
+                        <p class="mt-1 text-muted">Compare adjustable vs fixed dumbbells and find the best option for
+                            your space, budget, and goals. We break down the top picks from Bowflex, Amazon Basics, and
+                            more.</p>
+                    </div>
+                    <div class="product-action">
+                        <a href="/dumbbells/" class="btn btn-primary">👉 Read Full Guide</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. HOW IT WORKS -->
+    <section class="section" style="background-color: var(--bg-surface);">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="grid-3">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <span class="material-symbols-outlined"
+                        style="font-size: 32px; color: var(--primary); margin-bottom: 1rem;">category</span>
+                    <h3>Choose a Category</h3>
+                    <p class="text-muted">Select the equipment you are looking for.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <span class="material-symbols-outlined"
+                        style="font-size: 32px; color: var(--primary); margin-bottom: 1rem;">menu_book</span>
+                    <h3>Learn What Fits</h3>
+                    <p class="text-muted">Read our expert comparisons tailored to your goals.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <span class="material-symbols-outlined"
+                        style="font-size: 32px; color: var(--primary); margin-bottom: 1rem;">shopping_cart</span>
+                    <h3>Buy Confidently</h3>
+                    <p class="text-muted">Purchase via trusted retailers with no hidden markups.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. TRUST + DISCLAIMER -->
+    <section class="section">
+        <div class="container text-center">
+            <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 1.5rem;">Transparency & Trust</h2>
+            <p style="max-width: 600px; margin: 0 auto 1.5rem;" class="text-muted">
+                SmartFitGuide is independently researched. We may earn a small commission if you purchase through links
+                — at no extra cost to you.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; font-size: 0.9rem;">
+                <a href="/affiliate-disclosure.html" style="text-decoration: underline;">Affiliate Disclosure</a>
+                <a href="/privacy.html" style="text-decoration: underline;">Privacy Policy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>SmartFitGuide</h3>
+                    <p>Helping you build a better home gym, one smart choice at a time.</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/dumbbells/">Dumbbells</a></li>
+                        <li><a href="/supplements.html">Supplements</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/affiliate-disclosure.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 SmartFitGuide. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
