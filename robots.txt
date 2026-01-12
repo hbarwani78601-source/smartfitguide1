@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://hbarwani78601-source.github.io/smartfitguide1/sitemap.xml
