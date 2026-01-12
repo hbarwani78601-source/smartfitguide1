@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Main Pages -->
+    <!-- Core Pages -->
     <url>
-        <loc>https://hbarwani78601-source.github.io/smartfitguide1/</loc>
+        <loc>https://hbarwani78601-source.github.io/smartfitguide1/index.html</loc>
         <lastmod>2026-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -32,84 +32,72 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://hbarwani78601-source.github.io/smartfitguide1/about/</loc>
-        <lastmod>2026-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/</loc>
         <lastmod>2026-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://hbarwani78601-source.github.io/smartfitguide1/about/</loc>
+        <lastmod>2026-01-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
     <!-- Blog Articles -->
     <url>
-        <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/top-5-dumbbell-exercises-for-beginners.html</loc>
+        <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/how-much-weight-should-beginners-start-with.html</loc>
         <lastmod>2026-01-12</lastmod>
-        <changefreq>yearly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/how-much-weight-should-beginners-start-with.html</loc>
+        <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/top-5-dumbbell-exercises-for-beginners.html</loc>
         <lastmod>2026-01-12</lastmod>
-        <changefreq>yearly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/adjustable-vs-fixed-dumbbells.html</loc>
         <lastmod>2026-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/common-dumbbell-mistakes-beginners-make.html</loc>
-        <lastmod>2026-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/is-whey-protein-safe-for-beginners.html</loc>
-        <lastmod>2026-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/creatine-for-beginners.html</loc>
-        <lastmod>2026-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/supplements-vs-natural-diet.html</loc>
-        <lastmod>2026-01-12</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/how-to-start-home-workouts-minimal-equipment.html</loc>
-        <lastmod>2026-01-12</lastmod>
-        <changefreq>yearly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/dumbbells-vs-resistance-bands.html</loc>
         <lastmod>2026-01-12</lastmod>
-        <changefreq>yearly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-    <!-- Including the older articles found in directory just in case suitable -->
+    <!-- Additional articles present in directory for completeness -->
     <url>
-        <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/dumbbells-vs-bands.html</loc>
+        <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/common-dumbbell-mistakes-beginners-make.html</loc>
         <lastmod>2026-01-12</lastmod>
-        <changefreq>yearly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/home-workout-guide.html</loc>
+        <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/is-whey-protein-safe-for-beginners.html</loc>
         <lastmod>2026-01-12</lastmod>
-        <changefreq>yearly</changefreq>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/creatine-for-beginners.html</loc>
+        <lastmod>2026-01-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/supplements-vs-natural-diet.html</loc>
+        <lastmod>2026-01-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://hbarwani78601-source.github.io/smartfitguide1/blog/how-to-start-home-workouts-minimal-equipment.html</loc>
+        <lastmod>2026-01-12</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 </urlset>
