@@ -11,6 +11,67 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .blog-card {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            background: white;
+            transition: transform 0.2s, box-shadow 0.2s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .blog-card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-card h3 a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .blog-card h3 a:hover {
+            color: var(--primary);
+        }
+
+        .blog-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .read-more {
+            margin-top: auto;
+            color: var(--primary);
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,7 +89,7 @@
                     <li><a href="../quiz/">Quiz</a></li>
                     <li><a href="../dumbbells/">Dumbbells</a></li>
                     <li><a href="../resistance-bands/">Resistance Bands</a></li>
-                    <li><a href="index.html">Blog</a></li>
+                    <li><a href="index.html" style="color: var(--primary);">Blog</a></li>
                     <li><a href="../about/">About</a></li>
                 </ul>
             </nav>
@@ -38,21 +99,99 @@
     <div class="container section">
         <h1 class="section-title">Latest Guides</h1>
 
-        <div class="grid-3">
-            <div class="card">
-                <div class="card-body">
-                    <h3>Dumbbells vs. Resistance Bands: Which is Better?</h3>
-                    <p class="card-text">We compare the pros, cons, and best use cases for both to help you decide.</p>
-                    <a href="dumbbells-vs-bands.html" class="btn btn-primary">Read Article</a>
+        <div class="blog-grid">
+            <!-- Dumbbell Articles -->
+            <article class="blog-card">
+                <div class="blog-card-body">
+                    <span class="blog-tag">Exercises</span>
+                    <h3><a href="top-5-dumbbell-exercises-for-beginners.html">Top 5 Dumbbell Exercises for Beginners</a>
+                    </h3>
+                    <p class="text-muted" style="font-size: 0.9rem;">Simple, effective moves to start your journey.</p>
+                    <a href="top-5-dumbbell-exercises-for-beginners.html" class="read-more">Read Guide →</a>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h3>How to Start Home Workouts with Minimal Equipment</h3>
-                    <p class="card-text">You don't need a full gym. Here is how to get fit with just $50.</p>
-                    <a href="home-workout-guide.html" class="btn btn-primary">Read Article</a>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-body">
+                    <span class="blog-tag">Beginner Tips</span>
+                    <h3><a href="how-much-weight-should-beginners-start-with.html">How Much Weight Should You Start
+                            With?</a></h3>
+                    <p class="text-muted" style="font-size: 0.9rem;">Stop guessing. Here is how to pick the right load.
+                    </p>
+                    <a href="how-much-weight-should-beginners-start-with.html" class="read-more">Read Guide →</a>
                 </div>
-            </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-body">
+                    <span class="blog-tag">Comparison</span>
+                    <h3><a href="adjustable-vs-fixed-dumbbells.html">Adjustable vs Fixed Dumbbells: Which is Better?</a>
+                    </h3>
+                    <p class="text-muted" style="font-size: 0.9rem;">Save money and space by choosing the right type.
+                    </p>
+                    <a href="adjustable-vs-fixed-dumbbells.html" class="read-more">Read Guide →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-body">
+                    <span class="blog-tag">Safety</span>
+                    <h3><a href="common-dumbbell-mistakes-beginners-make.html">Common Dumbbell Mistakes Beginners
+                            Make</a></h3>
+                    <p class="text-muted" style="font-size: 0.9rem;">Avoid injury by fixing these 5 common errors.</p>
+                    <a href="common-dumbbell-mistakes-beginners-make.html" class="read-more">Read Guide →</a>
+                </div>
+            </article>
+
+            <!-- Supplement Articles -->
+            <article class="blog-card">
+                <div class="blog-card-body">
+                    <span class="blog-tag">Supplements</span>
+                    <h3><a href="is-whey-protein-safe-for-beginners.html">Is Whey Protein Safe for Beginners?</a></h3>
+                    <p class="text-muted" style="font-size: 0.9rem;">Separating the myths from facts about protein
+                        powder.</p>
+                    <a href="is-whey-protein-safe-for-beginners.html" class="read-more">Read Guide →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-body">
+                    <span class="blog-tag">Supplements</span>
+                    <h3><a href="creatine-for-beginners.html">Creatine for Beginners: Guide</a></h3>
+                    <p class="text-muted" style="font-size: 0.9rem;">What it does, how to use it, and is it safe?</p>
+                    <a href="creatine-for-beginners.html" class="read-more">Read Guide →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-body">
+                    <span class="blog-tag">Nutrition</span>
+                    <h3><a href="supplements-vs-natural-diet.html">Supplements vs Natural Diet</a></h3>
+                    <p class="text-muted" style="font-size: 0.9rem;">Do you really need pills, or is food enough?</p>
+                    <a href="supplements-vs-natural-diet.html" class="read-more">Read Guide →</a>
+                </div>
+            </article>
+
+            <!-- General -->
+            <article class="blog-card">
+                <div class="blog-card-body">
+                    <span class="blog-tag">Guide</span>
+                    <h3><a href="how-to-start-home-workouts-minimal-equipment.html">Start Home Workouts with Minimal
+                            Equipment</a></h3>
+                    <p class="text-muted" style="font-size: 0.9rem;">No gym? No problem. Here is how to start.</p>
+                    <a href="how-to-start-home-workouts-minimal-equipment.html" class="read-more">Read Guide →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-body">
+                    <span class="blog-tag">Comparison</span>
+                    <h3><a href="dumbbells-vs-resistance-bands.html">Dumbbells vs Resistance Bands</a></h3>
+                    <p class="text-muted" style="font-size: 0.9rem;">Which is the better investment for your home gym?
+                    </p>
+                    <a href="dumbbells-vs-resistance-bands.html" class="read-more">Read Guide →</a>
+                </div>
+            </article>
         </div>
     </div>
 
