@@ -4,19 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Start Home Workouts - SmartFitGuide</title>
-    <meta name="description" content="Start working out at home with minimal equipment.">
+    <title>Minimalist Home Gym Guide: Get Fit Under $100 - SmartFitGuide</title>
+    <meta name="description"
+        content="Learn how to build a complete home gym for under $100. The best budget equipment for beginners including bands, bells, and bodyweight basics.">
     <!-- Google Fonts & Material Symbols -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+
+        .article-content h2 {
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .gym-tier {
+            margin: 2rem 0;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            background: white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .gym-tier h3 {
+            margin-top: 0;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+
+        .price-tag {
+            font-weight: 700;
+            color: var(--accent);
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <div class="container">
             <nav>
-                <a href="/" class="logo">
+                <a href="../index.html" class="logo">
                     <span class="material-symbols-outlined" style="font-size: 28px;">fitness_center</span>
                     SmartFitGuide
                 </a>
@@ -24,36 +76,116 @@
                     <span class="material-symbols-outlined">menu</span>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="/quiz/">Quiz</a></li>
-                    <li><a href="/dumbbells/">Dumbbells</a></li>
-                    <li><a href="/resistance-bands/">Resistance Bands</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                    <li><a href="/about/">About</a></li>
+                    <li><a href="../quiz/">Quiz</a></li>
+                    <li><a href="../dumbbells/">Dumbbells</a></li>
+                    <li><a href="../resistance-bands/">Resistance Bands</a></li>
+                    <li><a href="index.html" style="color: var(--primary);">Blog</a></li>
+                    <li><a href="../about/">About</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <div class="container section" style="max-width: 800px;">
-        <div class="mb-1 text-muted"><small><a href="/blog/">Blog</a> > Home Workout Guide</small></div>
-        <h1 class="mb-1">How to Start Home Workouts with Minimal Equipment</h1>
+        <!-- Breadcrumb -->
+        <div class="mb-1 text-muted"><small><a href="index.html">Blog</a> > Home Gym Guide</small></div>
 
-        <div class="mt-2">
-            <p>You don't need a Peloton or a $2000 rack to get fit. Here is the minimalist approach.</p>
+        <!-- Hero -->
+        <h1 class="mb-1">How to Build a Complete Home Gym for Under $100</h1>
+        <div class="text-muted mb-2" style="display: flex; gap: 1rem; align-items: center;">
+            <span><span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle;">person</span>
+                SmartFitGuide Team</span>
+            <span><span class="material-symbols-outlined"
+                    style="font-size: 18px; vertical-align: middle;">schedule</span> 4 min read</span>
+        </div>
 
-            <h2 class="mt-2">1. The Floor is Your Friend</h2>
-            <p>Pushups, lunges, and planks require zero equipment. Start here.</p>
+        <img src="https://images.unsplash.com/photo-1598289431512-b97b0917affc?q=80&w=800&auto=format&fit=crop"
+            alt="Minimalist home workout setup"
+            style="width: 100%; border-radius: var(--radius-lg); margin-bottom: 2rem; object-fit: cover; height: 400px; background-color: #f0f0f0;">
 
-            <h2 class="mt-2">2. Get One Versatile Tool</h2>
-            <p>A single kettlebell or a pair of adjustable dumbbells can cover 90% of your needs.</p>
+        <div class="article-content">
+            <p>You don't need a $2,000 Peloton or a garage full of heavy iron to fit. In fact, some of the best
+                physiques are built with nothing more than gravity and simple tools.</p>
 
-            <h2 class="mt-2">3. Consistency > Intensity</h2>
-            <p>A mediocre workout done 3 times a week is better than a perfect workout done once a month.</p>
+            <p>If you are tired of monthly gym fees and crowded squat racks, this guide is for you. Here is exactly how
+                to set up a functional training space for less than the cost of two months at a commercial gym.</p>
+
+            <div class="gym-tier">
+                <h3><span class="material-symbols-outlined">star</span> Tier 1: The "No Excuses" Setup ($50)</h3>
+                <p>This is perfect for general fitness, weight loss, and mobility. You can store this entire gym in a
+                    backpack.</p>
+                <ul class="checklist">
+                    <li>
+                        <span>High-Quality Non-Slip Yoga Mat</span>
+                        <span class="price-tag">~$20</span>
+                    </li>
+                    <li>
+                        <span>Resistance Bands (Tube Set with Door Anchor)</span>
+                        <span class="price-tag">~$25</span>
+                    </li>
+                    <li>
+                        <span>StartFitGuide Basic Program</span>
+                        <span class="price-tag">FREE</span>
+                    </li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9em; color: var(--text-muted);"><strong>What you can
+                        do:</strong> Pushups, Band Rows, Squats, Lunges, Core work.</p>
+                <div class="mt-1">
+                    <a href="../resistance-bands/" class="btn btn-outline" style="font-size: 0.9em;">View Recommended
+                        Bands</a>
+                </div>
+            </div>
+
+            <div class="gym-tier" style="border-color: var(--primary);">
+                <h3><span class="material-symbols-outlined" style="color: var(--primary);">diamond</span> Tier 2: The
+                    "Muscle Builder" ($100+)</h3>
+                <p>If you want to add serious muscle size, you need a bit more resistance. By adding one or two key
+                    pieces, you unlock hundreds of new exercises.</p>
+                <ul class="checklist">
+                    <li>
+                        <span>Everything in Tier 1</span>
+                        <span class="price-tag">$45</span>
+                    </li>
+                    <li>
+                        <span>1 or 2 Adjustable Dumbbells (Used or Budget)</span>
+                        <span class="price-tag">~$50-80</span>
+                    </li>
+                    <li>
+                        <span>Doorway Pull-up Bar</span>
+                        <span class="price-tag">~$25</span>
+                    </li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9em; color: var(--text-muted);"><strong>Unlockable
+                        Moves:</strong> Heavy Chest Press, Pull-ups, Goblet Squats, Dumbbell Rows.</p>
+                <div class="mt-1">
+                    <a href="../dumbbells/" class="btn btn-primary" style="font-size: 0.9em;">View Recommended
+                        Dumbbells</a>
+                </div>
+            </div>
+
+            <h2>The "Zero-Gear" Routine (Start Today)</h2>
+            <p>Waiting for Amazon to deliver your gear? Do this circuit right now. Perform 3 rounds with 60 seconds rest
+                between rounds.</p>
+            <ul>
+                <li><strong>20 Bodyweight Squats</strong> (Legs)</li>
+                <li><strong>15 Pushups</strong> (Chest/Triceps) - Drop to knees if needed</li>
+                <li><strong>30 Second Plank</strong> (Core)</li>
+                <li><strong>20 Lunges</strong> (10 per leg)</li>
+                <li><strong>15 Glute Bridges</strong> (Posterior Chain)</li>
+            </ul>
+
+            <div style="margin-top: 3rem; background: #e8f0fe; padding: 1.5rem; border-radius: var(--radius-md);">
+                <p style="margin-top:0;"><strong>Pro Tip:</strong> Tracking your workouts is more important than the
+                    equipment you own. If you did 10 squats last week, do 11 this week. That is how you grow.</p>
+            </div>
+
         </div>
     </div>
 
     <footer>
         <div class="container text-center">
+            <p><small>Disclaimer: We participate in affiliate programs and may earn from qualifying purchases.</small>
+            </p>
             &copy; 2026 SmartFitGuide
         </div>
     </footer>
