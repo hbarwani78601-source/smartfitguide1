@@ -13,10 +13,54 @@
 </head>
 
 <body>
-    <!-- Global Header -->
-    <div id="global-header"></div>
-    <script src="../js/header.js"></script>
+    <!-- Global Header (Static) -->
+    <header class="global-header">
+        <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+            </svg>
+        </button>
+        <a href="../index.html" class="brand-name">SmartFitGuide</a>
+    </header>
+
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <nav class="side-nav" id="main-nav" aria-hidden="true" aria-label="Main Navigation">
+        <div class="nav-header">
+            <span class="brand-name-nav">SmartFitGuide</span>
+            <button class="close-menu" aria-label="Close navigation menu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                    <path
+                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                </svg>
+            </button>
+        </div>
+        <ul class="nav-list">
+            <li><a href="../index.html" class="nav-item">Home</a></li>
+            <li class="nav-item-group">
+                <button class="nav-item-accordion" aria-expanded="false">
+                    Products
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                        class="icon-arrow">
+                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                    </svg>
+                </button>
+                <ul class="nav-accordion-content">
+                    <li><a href="../dumbbells/index.html">Dumbbells</a></li>
+                    <li><a href="../supplements.html">Supplements</a></li>
+                    <li><a href="../resistance-bands/index.html">Resistance Bands</a></li>
+                    <li><a href="../yoga-mats/index.html">Yoga Mats</a></li>
+                    <li><a href="../accessories/index.html">Fitness Accessories</a></li>
+                </ul>
+            </li>
+            <li><a href="../blog/index.html" class="nav-item">Blog</a></li>
+            <li><a href="../blog/index.html" class="nav-item">Comparisons</a></li>
+            <li><span class="nav-item disabled">Quiz (Coming Soon)</span></li>
+            <li><a href="../about/index.html" class="nav-item">About Us</a></li>
+        </ul>
+    </nav>
     <link rel="stylesheet" href="../css/header.css">
+    <script src="../js/header.js" defer></script>
 
     <div class="container section" style="max-width: 800px;">
         <div class="mb-1 text-muted"><small><a href="index.html">Blog</a> > Nutrition</small></div>

@@ -1,4 +1,4 @@
-/* Header CSS */
+/* Header CSS - Optimized for LCP & CLS */
 
 :root {
     --header-height: 60px;
@@ -12,19 +12,18 @@
     --overlay-bg: rgba(0, 0, 0, 0.5);
     --border-color: #dadce0;
     --primary-color: #4285f4;
-    /* Example accent */
 }
 
-/* Base Reset for Header Elements */
+/* Base Reset */
 .global-header *,
 .side-nav * {
     box-sizing: border-box;
 }
 
-/* Component: Header Bar */
+/* Critical LCP: Fixed Header */
 .global-header {
-    position: sticky;
-    /* Or fixed, user requested 'Always visible' so fixed is better if we want it to stay */
+    position: fixed;
+    /* Fixed as per requirement */
     top: 0;
     left: 0;
     width: 100%;
@@ -34,10 +33,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Center Brand Name */
     padding: 0 1rem;
     z-index: var(--z-header);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    contain: layout size;
+    /* Performance optimization */
+}
+
+/* Prevent content from hiding behind fixed header */
+body {
+    padding-top: var(--header-height);
 }
 
 .brand-name {
@@ -46,13 +51,11 @@
     color: var(--header-text);
     text-decoration: none;
     font-family: inherit;
-    /* Use site font */
 }
 
 .menu-toggle {
     position: absolute;
     left: 1rem;
-    /* Fixed left position */
     top: 50%;
     transform: translateY(-50%);
     background: none;
@@ -71,11 +74,15 @@
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-.menu-toggle .material-symbols-outlined {
-    font-size: 28px;
+/* SVG Handling */
+.menu-toggle svg,
+.close-menu svg {
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
 }
 
-/* Component: Navigation Overlay */
+/* Navigation Overlay */
 .nav-overlay {
     position: fixed;
     top: 0;
@@ -87,33 +94,36 @@
     visibility: hidden;
     transition: opacity 0.3s ease;
     z-index: var(--z-overlay);
+    pointer-events: none;
 }
 
 .nav-overlay.active {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
 }
 
-/* Component: Side Navigation */
+/* Side Navigation */
 .side-nav {
     position: fixed;
     top: 0;
     left: 0;
-    /* Slide out from left */
     width: var(--nav-width);
     height: 100%;
     background: var(--nav-bg);
     z-index: var(--z-sidenav);
     transform: translateX(-100%);
     transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-    /* Material ease */
     display: flex;
     flex-direction: column;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    visibility: hidden;
+    /* Hide when closed to prevent focus */
 }
 
 .side-nav.active {
     transform: translateX(0);
+    visibility: visible;
 }
 
 .nav-header {
@@ -139,6 +149,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--header-text);
 }
 
 .close-menu:hover {
@@ -176,7 +187,6 @@
 
 .nav-item.active {
     background-color: rgba(66, 133, 244, 0.1);
-    /* Primary color tint */
     color: var(--primary-color);
     font-weight: 500;
 }
@@ -199,6 +209,9 @@
 
 .icon-arrow {
     transition: transform 0.2s;
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
 }
 
 .nav-item-group.expanded .icon-arrow {
@@ -217,13 +230,11 @@
 
 .nav-item-group.expanded .nav-accordion-content {
     max-height: 500px;
-    /* Arbitrary large height */
 }
 
 .nav-accordion-content li a {
     display: block;
     padding: 0.75rem 1.5rem 0.75rem 2.5rem;
-    /* Indented */
     text-decoration: none;
     color: #5f6368;
     font-size: 0.95rem;
@@ -236,17 +247,4 @@
 .nav-accordion-content li a.active {
     color: var(--primary-color);
     font-weight: 500;
-}
-
-/* Responsive Handling */
-@media (min-width: 1024px) {
-    /* If user wanted a different layout for desktop, we could do it here of course.
-       But user asked for 'slide-out (desktop)' and 'slide-down (mobile)' - 
-       Wait, let's re-read: "Open a slide-down (mobile) or slide-out (desktop)"
-       Currently I implemented slide-out (side). 
-       Slide-down is usually top-to-bottom overlay.
-       
-       Let's stick to Side Nav for consistency as simpler is better, 
-       but if we really want slide down for mobile we can add a media query.
-    */
 }
