@@ -10,6 +10,88 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+
+        table {
+            border: none;
+            margin: 0;
+        }
+
+        th,
+        td {
+            font-size: 0.95rem;
+            /* Better readability */
+            line-height: 1.6;
+        }
+
+        .product-card-horizontal {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            /* Increased gap */
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            /* Larger radius */
+            padding: 2rem;
+            /* Increased padding */
+            margin-bottom: 2rem;
+            background: white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        @media(min-width: 768px) {
+            .product-card-horizontal {
+                flex-direction: row;
+                align-items: center;
+                /* Center alignment */
+            }
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            background: var(--bg-surface);
+            padding: 1.25rem;
+            border-radius: var(--radius-md);
+        }
+
+        .pros span {
+            color: var(--accent);
+            /* Google Green */
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .cons span {
+            color: #ea4335;
+            /* Google Red */
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        @media (min-width: 768px) {
+            .product-content {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            .product-action {
+                margin-top: auto;
+                /* Pushes button to bottom */
+                padding-top: 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -66,6 +148,102 @@
         <div class="mb-1 text-muted"><small><a href="/">Home</a> > Categories > Accessories</small></div>
         <h1 class="section-title" style="text-align: left;">Small Gear, Big Results</h1>
         <p>Complete your home gym with these essentials.</p>
+
+        <div class="mt-2" style="max-width: 800px;">
+            <!-- Product 1 -->
+            <div class="product-card-horizontal">
+                <div class="product-image">
+                    <span class="material-symbols-outlined" style="font-size: 48px;">fitness_center</span>
+                </div>
+                <div class="product-content">
+                    <div>
+                        <h3>Pull-up Bar <span class="badge">Best for Upper Body</span></h3>
+                        <p>The ultimate bodyweight tool for back and bicep strength. Fits standard doorways.</p>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <strong>Pros:</strong>
+                                <span>+ Cheap & effective</span>
+                                <span>+ Easy install (usually)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-action">
+                        <a href="../blog/home-workout-guide.html" class="btn btn-primary">Read Guide</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card-horizontal">
+                <div class="product-image">
+                    <span class="material-symbols-outlined" style="font-size: 48px;">accessibility_new</span>
+                </div>
+                <div class="product-content">
+                    <div>
+                        <h3>Foam Roller <span class="badge">Best for Recovery</span></h3>
+                        <p>Self-massage tool to relieve muscle tightness and improve mobility after workouts.</p>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <strong>Pros:</strong>
+                                <span>+ Improves flexibility</span>
+                                <span>+ Reduces soreness</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-action">
+                        <a href="../blog/home-workout-guide.html" class="btn btn-primary">View Tips</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card-horizontal">
+                <div class="product-image">
+                    <span class="material-symbols-outlined" style="font-size: 48px;">directions_run</span>
+                </div>
+                <div class="product-content">
+                    <div>
+                        <h3>Jump Rope <span class="badge">Best for Cardio</span></h3>
+                        <p>Burn major calories and improve coordination with this simple, portable tool.</p>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <strong>Pros:</strong>
+                                <span>+ High calorie burn</span>
+                                <span>+ Fun & challenging</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-action">
+                        <a href="../blog/home-workout-guide.html" class="btn btn-primary">Cardio Guide</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card-horizontal">
+                <div class="product-image">
+                    <span class="material-symbols-outlined" style="font-size: 48px;">fitness_center</span>
+                </div>
+                <div class="product-content">
+                    <div>
+                        <h3>Ab Roller <span class="badge">Best for Core</span></h3>
+                        <p>Advanced core tool that targets abs, lower back, and shoulders. Simple but brutally
+                            effective.</p>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <strong>Pros:</strong>
+                                <span>+ Deep core activation</span>
+                                <span>+ Very inexpensive</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-action">
+                        <a href="../blog/top-5-dumbbell-exercises-for-beginners.html" class="btn btn-primary">Core
+                            Tips</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer>
