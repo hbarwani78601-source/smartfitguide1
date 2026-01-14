@@ -91,32 +91,10 @@
 <body>
 
     <!-- 1. HEADER (Sticky) -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">
-                    <span class="material-symbols-outlined"
-                        style="font-size: 32px; color: var(--primary);">fitness_center</span>
-                </a>
-                <div class="mobile-toggle">
-                    <span class="material-symbols-outlined">menu</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html" style="color: var(--primary);">Home</a></li>
-                    <li><a href="dumbbells/">Dumbbells</a></li>
-                    <li><a href="supplements.html">Supplements</a></li>
-                    <li>
-                        <a href="quiz/" class="nav-disabled">Quiz <small style="font-size: 0.7em;">(Soon)</small></a>
-                    </li>
-                    <li><a href="blog/">Blog</a></li>
-                    <li>
-                        <a href="dumbbells/" class="btn btn-primary"
-                            style="padding: 0.5rem 1.25rem; font-size: 0.9rem;">Find My Equipment</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- Global Header -->
+    <div id="global-header"></div>
+    <script src="js/header.js"></script>
+    <link rel="stylesheet" href="css/header.css">
 
     <!-- 2. HERO SECTION -->
     <section class="hero">

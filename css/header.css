@@ -1,0 +1,252 @@
+/* Header CSS */
+
+:root {
+    --header-height: 60px;
+    --nav-width: 280px;
+    --z-header: 1000;
+    --z-overlay: 1001;
+    --z-sidenav: 1002;
+    --header-bg: #ffffff;
+    --header-text: #202124;
+    --nav-bg: #ffffff;
+    --overlay-bg: rgba(0, 0, 0, 0.5);
+    --border-color: #dadce0;
+    --primary-color: #4285f4;
+    /* Example accent */
+}
+
+/* Base Reset for Header Elements */
+.global-header *,
+.side-nav * {
+    box-sizing: border-box;
+}
+
+/* Component: Header Bar */
+.global-header {
+    position: sticky;
+    /* Or fixed, user requested 'Always visible' so fixed is better if we want it to stay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center Brand Name */
+    padding: 0 1rem;
+    z-index: var(--z-header);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--header-text);
+    text-decoration: none;
+    font-family: inherit;
+    /* Use site font */
+}
+
+.menu-toggle {
+    position: absolute;
+    left: 1rem;
+    /* Fixed left position */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--header-text);
+    transition: background 0.2s;
+}
+
+.menu-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menu-toggle .material-symbols-outlined {
+    font-size: 28px;
+}
+
+/* Component: Navigation Overlay */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-bg);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: var(--z-overlay);
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Component: Side Navigation */
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Slide out from left */
+    width: var(--nav-width);
+    height: 100%;
+    background: var(--nav-bg);
+    z-index: var(--z-sidenav);
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    /* Material ease */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.side-nav.active {
+    transform: translateX(0);
+}
+
+.nav-header {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.brand-name-nav {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.close-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-menu:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Navigation List */
+.nav-list {
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.nav-item,
+.nav-item-accordion {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    color: var(--header-text);
+    font-size: 1rem;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.nav-item:hover,
+.nav-item-accordion:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.nav-item.active {
+    background-color: rgba(66, 133, 244, 0.1);
+    /* Primary color tint */
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.nav-item.disabled {
+    color: #9aa0a6;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Accordion */
+.nav-item-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item-accordion {
+    justify-content: space-between;
+}
+
+.icon-arrow {
+    transition: transform 0.2s;
+}
+
+.nav-item-group.expanded .icon-arrow {
+    transform: rotate(180deg);
+}
+
+.nav-accordion-content {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #fafafa;
+}
+
+.nav-item-group.expanded .nav-accordion-content {
+    max-height: 500px;
+    /* Arbitrary large height */
+}
+
+.nav-accordion-content li a {
+    display: block;
+    padding: 0.75rem 1.5rem 0.75rem 2.5rem;
+    /* Indented */
+    text-decoration: none;
+    color: #5f6368;
+    font-size: 0.95rem;
+}
+
+.nav-accordion-content li a:hover {
+    color: var(--header-text);
+}
+
+.nav-accordion-content li a.active {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Responsive Handling */
+@media (min-width: 1024px) {
+    /* If user wanted a different layout for desktop, we could do it here of course.
+       But user asked for 'slide-out (desktop)' and 'slide-down (mobile)' - 
+       Wait, let's re-read: "Open a slide-down (mobile) or slide-out (desktop)"
+       Currently I implemented slide-out (side). 
+       Slide-down is usually top-to-bottom overlay.
+       
+       Let's stick to Side Nav for consistency as simpler is better, 
+       but if we really want slide down for mobile we can add a media query.
+    */
+}
