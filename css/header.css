@@ -1,7 +1,8 @@
 /* Header CSS - Optimized for LCP & CLS */
 
 :root {
-    --header-height: 60px;
+    --header-height: 72px;
+    /* Increased for safety */
     --nav-width: 280px;
     --z-header: 1000;
     --z-overlay: 1001;
