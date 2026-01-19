@@ -274,47 +274,59 @@ nav {
 
 /* Blog Article Layout */
 .blog-post {
-  max-width: 800px;
+  max-width: 100%;
+  /* Allow full width for the container */
   margin: 0 auto;
-  padding-top: 2rem;
-  /* Reduced top padding */
+  padding: 2rem 0;
 }
 
-.blog-header {
+header.blog-header {
   border-bottom: 1px solid var(--border);
-  margin-bottom: 2rem;
+  margin: 0 0 2rem 0;
   padding-bottom: 1.5rem;
+  max-width: 100%;
+  /* Allow full width */
+  text-align: left;
+  /* Ensure text aligns left */
+  display: flex;
+  flex-direction: column;
+  /* Force vertical stacking */
 }
 
 .blog-header h1 {
   font-size: 2.5rem;
-  /* Desktop base */
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--text-main);
+  max-width: var(--container);
+  /* Ensure it aligns with global container */
+}
+
+/* Constrain the reading content, not the header */
+.article-content {
+  max-width: 800px;
+  margin: 0 auto;
+  /* Center the content */
 }
 
 .meta-info {
   display: flex;
-  flex-direction: row;
-  /* Explicitly horizontal */
   flex-wrap: wrap;
   align-items: center;
   gap: 1.5rem;
   color: var(--text-muted);
   font-size: 0.9rem;
   font-weight: 500;
+  margin-top: 1rem;
 }
 
 .meta-item {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+  display: inline-block;
 }
 
+/* Hide icons for cleaner look */
 .meta-item .material-symbols-outlined {
-  font-size: 18px;
-  color: var(--primary);
+  display: none;
 }
 
 /* Table of Contents */
