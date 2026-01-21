@@ -648,241 +648,278 @@ details.faq-item p {
 }
 
 .btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* --- SCALABLE EXPERT CARD LAYOUT (Xiaomi-Style) --- */
+
+/* 1. Sub-Category Partition */
+.partition-header {
   display: flex;
-  /* --- SCALABLE EXPERT CARD LAYOUT (Xiaomi-Style) --- */
+  align-items: center;
+  gap: 1rem;
+  margin: 4rem 0 2rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border);
+  position: relative;
+}
 
-  /* 1. Sub-Category Partition */
-  .partition-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin: 3rem 0 1.5rem 0;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--border);
-  }
+.partition-header::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background: var(--primary);
+}
 
-  .partition-badge {
-    background: var(--text-main);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: var(--radius-sm);
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-  }
+.partition-badge {
+  background: var(--text-main);
+  color: white;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-sm);
+}
 
-  .partition-title {
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-main);
-    margin: 0;
-  }
+.partition-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+}
 
-  /* 2. Horizontal Expert Card */
-  .expert-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    margin-bottom: 2rem;
-    overflow: hidden;
-    transition: box-shadow 0.2s;
-    position: relative;
-  }
+/* 2. Horizontal Expert Card */
+.expert-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  /* Highlight Accent */
+  border-radius: var(--radius-lg);
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
 
-  .expert-card:hover {
-    box-shadow: var(--shadow-hover);
-  }
+.expert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
 
+.card-main-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 0;
+}
+
+.card-image-col {
+  background: white;
+  /* Changed from #f8f9fa for cleaner look */
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--border);
+  position: relative;
+}
+
+.card-image-col img,
+.card-image-col .material-symbols-outlined {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.expert-card:hover .card-image-col img {
+  transform: scale(1.05);
+}
+
+.rank-circle {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 48px;
+  /* Larger */
+  height: 48px;
+  background: var(--primary);
+  /* Filled Color */
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.4rem;
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+}
+
+.card-details-col {
+  padding: 2rem;
+}
+
+/* Header within Card */
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+}
+
+.card-product-name {
+  font-size: 1.6rem;
+  font-weight: 800;
+  /* Bolder */
+  color: var(--text-main);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.card-score-badge {
+  background: #fef3c7;
+  color: #b45309;
+  /* Darker Amber */
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-weight: 800;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  /* Pop */
+}
+
+/* Specs Grid */
+.specs-grid-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+  background: #f8f9fa;
+  /* Subtle BG */
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  /* Stack Icon and Text */
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.spec-item .material-symbols-outlined {
+  color: var(--primary);
+  font-size: 1.5rem;
+  /* Larger Icons */
+  background: white;
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Expert Take Toggle */
+.expert-review-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  border-top: 1px solid var(--border);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.expert-review-toggle:hover {
+  background: var(--bg-surface);
+}
+
+.expert-review-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+/* Pros and Cons Grid */
+.pros-cons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.pc-col h4 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.pc-list li {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  align-items: flex-start;
+}
+
+.pc-list.pros li::before {
+  content: 'check_circle';
+  font-family: 'Material Symbols Outlined';
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.pc-list.cons li::before {
+  content: 'cancel';
+  font-family: 'Material Symbols Outlined';
+  color: #d93025;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
   .card-main-grid {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 0;
+    grid-template-columns: 1fr;
+    /* Stack on mobile */
   }
 
   .card-image-col {
-    background: #f8f9fa;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-right: 1px solid var(--border);
-    position: relative;
-  }
-
-  .card-image-col img,
-  .card-image-col .material-symbols-outlined {
-    max-width: 100%;
-    max-height: 200px;
-    object-fit: contain;
-  }
-
-  .rank-circle {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    width: 40px;
-    height: 40px;
-    background: white;
-    border: 2px solid var(--primary);
-    color: var(--primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.2rem;
-    box-shadow: var(--shadow-1);
-    z-index: 2;
-  }
-
-  .card-details-col {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
     padding: 1.5rem;
   }
 
-  /* Header within Card */
   .card-top-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-    gap: 1rem;
-  }
-
-  .card-product-name {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--text-main);
-    margin: 0;
-    line-height: 1.2;
-  }
-
-  .card-score-badge {
-    background: #fef3c7;
-    /* Amber 100 */
-    color: #d97706;
-    /* Amber 700 */
-    padding: 0.25rem 0.5rem;
-    border-radius: var(--radius-sm);
-    font-weight: 700;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    white-space: nowrap;
-  }
-
-  /* Specs Grid */
-  .specs-grid-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1rem;
-    margin: 1.5rem 0;
-    background: var(--bg-surface);
-    padding: 1rem;
-    border-radius: var(--radius-md);
-  }
-
-  .spec-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 0.9rem;
-    color: var(--text-main);
-  }
-
-  .spec-item .material-symbols-outlined {
-    color: var(--primary);
-    font-size: 1.2rem;
-    background: rgba(0, 68, 204, 0.1);
-    padding: 4px;
-    border-radius: 4px;
-  }
-
-  /* Expert Take Toggle */
-  .expert-review-toggle {
-    width: 100%;
-    background: none;
-    border: none;
-    border-top: 1px solid var(--border);
-    padding: 1rem;
-    text-align: left;
-    font-weight: 600;
-    color: var(--primary);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .expert-review-toggle:hover {
-    background: var(--bg-surface);
-  }
-
-  .expert-review-content {
-    padding: 0 1.5rem 1.5rem 1.5rem;
-  }
-
-  /* Pros and Cons Grid */
-  .pros-cons-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 1rem;
-  }
-
-  .pc-col h4 {
-    font-size: 1rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .pc-list li {
-    display: flex;
+    flex-direction: column;
     gap: 0.5rem;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-    align-items: flex-start;
   }
 
-  .pc-list.pros li::before {
-    content: 'check_circle';
-    font-family: 'Material Symbols Outlined';
-    color: var(--accent);
-    font-size: 1.1rem;
+  .pros-cons-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
-
-  .pc-list.cons li::before {
-    content: 'cancel';
-    font-family: 'Material Symbols Outlined';
-    color: #d93025;
-    font-size: 1.1rem;
-  }
-
-  @media (max-width: 768px) {
-    .card-main-grid {
-      grid-template-columns: 1fr;
-      /* Stack on mobile */
-    }
-
-    .card-image-col {
-      border-right: none;
-      border-bottom: 1px solid var(--border);
-      padding: 1.5rem;
-    }
-
-    .card-top-row {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .pros-cons-grid {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-  }
-
-  width: 100%;
 }
+
+
 
 @media (max-width: 768px) {
   .category-hero {
