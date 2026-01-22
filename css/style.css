@@ -1296,3 +1296,51 @@ details.faq-item p {
   vertical-align: middle;
   text-transform: uppercase;
 }
+
+/* --- CATEGORY NAVIGATION PILLS --- */
+.category-nav {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 1rem;
+  padding: 1rem 0;
+  margin: -1rem 0 2rem 0;
+  /* Align tightly below hero */
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scroll on mobile */
+  scrollbar-width: none;
+  /* Hide scrollbar Firefox */
+}
+
+.category-nav::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar Chrome/Safari */
+}
+
+.nav-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  background: white;
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-pill:hover {
+  background: var(--bg-surface);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+}
+
+.nav-pill:active {
+  transform: translateY(0);
+}
