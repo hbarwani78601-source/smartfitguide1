@@ -17,9 +17,7 @@
     <!-- Global Header (Static) -->
     <header class="global-header">
         <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-            </svg>
+            <span class="material-symbols-outlined">menu</span>
         </button>
         <a href="../index.html" class="brand-name">SmartFitGuide</a>
     </header>
@@ -30,60 +28,61 @@
         <div class="nav-header">
             <span class="brand-name-nav">SmartFitGuide</span>
             <button class="close-menu" aria-label="Close navigation menu">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                    <path
-                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
-                </svg>
+                <span class="material-symbols-outlined">close</span>
             </button>
         </div>
         <ul class="nav-list">
             <li><a href="../index.html" class="nav-item">Home</a></li>
-            <li class="nav-item-group">
-                <button class="nav-item-accordion" aria-expanded="false">
-                    Products
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
-                        class="icon-arrow">
-                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
-                    </svg>
-                </button>
-                <ul class="nav-accordion-content">
-                    <li><a href="../dumbbells/index.html">Dumbbells</a></li>
-                    <li><a href="../supplements.html">Supplements</a></li>
-                    <li><a href="../resistance-bands/index.html">Resistance Bands</a></li>
-                    <li><a href="../yoga-mats/index.html">Yoga Mats</a></li>
-                    <li><a href="../accessories/index.html">Fitness Accessories</a></li>
-                </ul>
-            </li>
-            <li><a href="../blog/index.html" class="nav-item">Blog</a></li>
-            <li><a href="../blog/index.html" class="nav-item">Comparisons</a></li>
-            <li><span class="nav-item disabled">Quiz (Coming Soon)</span></li>
-            <li><a href="../about/index.html" class="nav-item">About Us</a></li>
+            <li><a href="../blog/index.html" class="nav-item">Blogs</a></li>
+            <li><a href="../deep-research/index.html" class="nav-item">Deep Research</a></li>
+            <li><a href="../community/index.html" class="nav-item">Community</a></li>
+            <li><a href="index.html" class="nav-item">About</a></li>
         </ul>
     </nav>
-    <link rel="stylesheet" href="../css/header.css">
     <script src="../js/header.js" defer></script>
 
-    <div class="container section" style="max-width: 800px;">
+    <div class="container section" style="max-width: 800px; padding-top: 4rem;">
         <h1 class="section-title">About SmartFitGuide</h1>
 
-        <p>Fitness should be simple. But if you search for "best home gym equipment" online, you get promised overnight
-            transformations and pushed toward $2,000 treadmills you don't need.</p>
+        <p class="text-muted" style="font-size: 1.25rem; line-height: 1.6; margin-bottom: 2rem;">
+            A research notebook for the modern home athlete. We explore the physiology, physics, and practicalities of
+            training at home.
+        </p>
 
-        <p class="mt-1"><strong>We built SmartFitGuide to change that.</strong></p>
+        <h2 class="mt-2">Our Philosophy</h2>
+        <p>Most fitness sites want to sell you something immediately. We want you to read something first.</p>
+        <p>Our goal is to act as a filter for the noise. We read the studies, test the equipment, and synthesize the
+            findings into clear, legible notes.</p>
 
-        <h2 class="mt-2">Our Mission</h2>
-        <p>To help beginners build effective, budget-friendly home workouts without the hype.</p>
+        <h2 class="mt-2">How We Work (Transparency)</h2>
+        <div class="callout-box" style="margin-bottom: 2rem;">
+            <strong>Note on Methodology:</strong> This site uses AI tools to assist in summarizing research papers and
+            structuring content. However, all claims are verified against public studies. We treat AI as a research
+            assistant, not an author.
+        </div>
 
-        <h2 class="mt-2">How We Make Money (Transparency)</h2>
+        <h3 style="font-size: 1.2rem; margin-top: 1.5rem;">Affiliate Disclosure</h3>
         <p>We are reader-supported. That means when you buy a product via our links (like Amazon), we may earn a small
-            commission. This comes at <strong>zero extra cost</strong> to you.</p>
-        <p>We do not accept payments from brands to rank their products higher. Our recommendations are based on
-            research, testing, and value for money.</p>
+            commission. This comes at <strong>zero extra cost</strong> to you and helps keep this research hub ad-free.
+        </p>
+
+        <h3 style="font-size: 1.2rem; margin-top: 1.5rem;">Medical Disclaimer</h3>
+        <p>Content on this site is for educational and informational purposes only. It is exploratory in nature and
+            should not be taken as medical advice.</p>
     </div>
 
-    <footer>
+    <footer
+        style="margin-top: 4rem; padding: 3rem 0; border-top: 1px solid var(--border); background: var(--bg-surface);">
         <div class="container text-center">
-            &copy; 2026 SmartFitGuide
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">SmartFitGuide Research</h3>
+            <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem;">
+                <a href="../blog/index.html">All Blogs</a>
+                <a href="index.html">About</a>
+                <a href="../community/index.html">Discussion</a>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-light);">
+                &copy; 2026 SmartFitGuide.
+            </div>
         </div>
     </footer>
     <script src="../js/main.js"></script>
